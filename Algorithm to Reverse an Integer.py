@@ -9,8 +9,9 @@ def reverse_an_integer(number):
     # Use join method to turn the reversed list back into a string
     number = int(number)
     # Converts the number back into an integer
-    # This done in the case that the reversal has leading zeros
+    # This is done in the case that the reversal has leading zeros
     return number
     # I can now return my reversed integer
 
 reverse_an_integer(34890)
+reverse_an_integer(74)
