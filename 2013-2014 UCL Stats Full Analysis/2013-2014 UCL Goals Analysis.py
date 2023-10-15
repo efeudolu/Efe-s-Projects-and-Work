@@ -1,26 +1,27 @@
+
 import matplotlib.pyplot as plt
 
-# Two lists for the data that will be used
+def create_bar_chart(x_values, y_values, x_label, y_label, title, number_of_ticks):
+    # Created a function to represent data in a bar chart
+    # Function takes in 5 parameters
+
+    # Create the bar chart
+    plt.bar(x_values, y_values)
+
+    # Adding labels and a title
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.title(title)
+
+    # Apply  tick positions to the y-axis
+    plt.yticks(number_of_ticks)
+
+    # Display the graph
+    plt.show()
+
+
 players = ["Ronaldo", "Ibrahimovic", "Messi", "Costa", "Lewandowski"]
 goals = [17, 10, 8, 8, 6]
+ticks = list(range(1, max(goals) + 4))
 
-# Create the bar graph
-plt.bar(players, goals)
-
-# Adding labels and a title
-plt.xlabel('Player Names')
-plt.ylabel('Goals Scored')
-plt.title("Top Five Scorers of 2013-2014 UCL Season")
-
-# Bounds for the number of goals scored on the y-axis
-plt.ylim(1,20)
-
-# Ticks will increase by 1, from 1 to 20
-custom_ticks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-
-# Plot these ticks on y axis
-plt.yticks(custom_ticks)
-
-
-# Display the graph
-plt.show()
+create_bar_chart(players, goals, 'Player Names', 'Goals Scored', 'Top Scorers of 2013-2014 UCL Season', ticks)
