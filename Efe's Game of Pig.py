@@ -1,7 +1,7 @@
-# This function allows Python to generate random numbers later on
+# This module allows Python to generate random numbers later on
 import random
 
-# Simple welcome into the game
+# Simple welcome and explanation of the rules
 print(" === Welcome to Efe's Game of Pig! ===")
 print("Here are the rules of the game.")
 print("This a simple decision making game which includes one die, a player and a computer.")
