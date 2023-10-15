@@ -2,7 +2,16 @@
 import random
 
 # Simple welcome into the game
-print("Welcome to Efe's Game of Pig! ")
+print(" === Welcome to Efe's Game of Pig! ===")
+print("Here are the rules of the game.")
+print("This a simple decision making game which includes one die, a player and a computer.")
+print("The player starts the game, and you can either choose to roll or hold the die.")
+print("If you roll a number above one, you can roll again or hold.")
+print("If you roll again, but roll a one, you lose all points for that turn, and your turn is over.")
+print("If you choose to hold, the points you have accumulated during that turn will be saved, and your turn is over.")
+print("The winner of the game is whoever reaches 100 points first.")
+print("Good luck!")
+
 
 """
 Function to roll the dice here
@@ -66,6 +75,7 @@ If the player reaches a score of 100 or more, the while loop will be exited
 If the player reaches a score of 100 or more, a congratulatory message is printed
 The number of turns used to win is printed as well
 If the computer wins, the number of turns it took for it to win will be printed
+Input will be requested for the player to see if player wants to play again
 """
 def play_game():
     player_score = 0
@@ -89,6 +99,12 @@ def play_game():
         print(f"Congratulations! You won in {turns} turns.")
     else:
         print(f"The computer won in {turns} turns.")
+
+    restart = input("Would you like to play again?: ")
+    if restart.lower() == "yes":
+        play_game()
+    elif restart.lower() == "no":
+        print("Thanks for playing!")
 
 # Function is called to begin the game
 play_game()
