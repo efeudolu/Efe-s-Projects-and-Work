@@ -1,2 +1,20 @@
-Python 3.11.4 (v3.11.4:d2340ef257, Jun  6 2023, 19:15:51) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
-Type "help", "copyright", "credits" or "license()" for more information.
+import matplotlib.pyplot as plt
+
+def create_bar_chart(x_values, y_values, x_label, y_label, title, number_of_ticks):
+
+    plt.bar(x_values, y_values)
+
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.title(title)
+
+    plt.yticks(number_of_ticks)
+
+    plt.show()
+
+
+players = ["Rooney & Di Maria", "Benzema & Ronaldo"]
+assists = [6, 5]
+ticks = list(range(1, max(assists) + 1))
+
+create_bar_chart(players, assists, 'Player Names', 'Assists Provided', 'Assist Leaders for 2013-2014 UCL Season', ticks)
