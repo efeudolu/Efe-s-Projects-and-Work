@@ -20,8 +20,8 @@ def create_bar_chart(x_values, y_values, x_label, y_label, title, number_of_tick
     plt.show()
 
 
-players = ["Ronaldo", "Ibrahimovic", "Messi & Costa"]
-goals = [17, 10, 8]
+players = ["Ronaldo", "Ibrahimovic", "Messi & Costa", "Aguero & Lewandowski & Bale"]
+goals = [17, 10, 8, 6]
 ticks = list(range(1, max(goals) + 1))
 
 create_bar_chart(players, goals, 'Player Names', 'Goals Scored', 'Top Scorers of 2013-2014 UCL Season', ticks)
