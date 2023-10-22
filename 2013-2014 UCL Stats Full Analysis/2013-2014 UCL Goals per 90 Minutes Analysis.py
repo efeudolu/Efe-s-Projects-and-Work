@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def create_scatter_plot(x_values, y_values, x_label, y_label, title, number_of_ticks):
 
 
-    plt.bar(x_values, y_values)
+    plt.scatter(x_values, y_values, label="Goals per 90", marker="o")
 
 
     plt.xlabel(x_label)
