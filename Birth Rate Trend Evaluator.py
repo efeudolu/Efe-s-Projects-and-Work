@@ -46,7 +46,7 @@ else:
         elif year > 0:
             birth_rate = float(input("What is the birth rate of data point " + str(data_point_number)+ "? "))
             # I will then ask about birth rate
-            if birth_rate > 0.0:
+            if birth_rate >= 0.0:
                 year_list.append(year)
                 birth_rate_list.append(birth_rate)
                 # If birth rate is valid, I will add the year and birth rate to their respective lists
